@@ -1,0 +1,44 @@
+package StringBufferBuilder;
+
+public class StringBuffBuildBasic {
+	
+	public static void main(String[] args) {
+		StringBuffer buff1 = new StringBuffer("ABC");
+		StringBuffer buff2 = new StringBuffer("ABC");
+		StringBuffer buff3 = new StringBuffer("XYZ");
+		
+		buff1.append(buff2);
+		System.out.println(buff1);
+		
+		/*
+		 * Two StringBuffer objects initially created with "ABC" contents. No additional
+		 * StringBuffer objects are created during the append operation. The existing
+		 * buff1 object's internal state is modified.
+		 */		
+		
+		buff1.append(buff3);
+		System.out.println(buff1);
+		
+		/*
+		 * Two StringBuffer objects initially created with contents "ABC" and "XYZ". No
+		 * additional StringBuffer objects are created during the append operation. The
+		 * existing buff1 object's internal state is modified.
+		 */
+		
+		String s = buff1.toString() + buff2.toString();
+		System.out.println(s);
+		
+		/*
+		 * StringBuilder Objects: sb1 and sb2 are StringBuilder objects, each containing
+		 * "Hello" and "World" respectively.
+		 * 
+		 * toString Method: sb1.toString() and sb2.toString() convert the contents of
+		 * StringBuilder objects into String objects.
+		 * 
+		 * Concatenation: The + operator concatenates the resulting String objects
+		 * (sb1.toString() and sb2.toString()), producing a new String object
+		 */
+		
+	}
+
+}

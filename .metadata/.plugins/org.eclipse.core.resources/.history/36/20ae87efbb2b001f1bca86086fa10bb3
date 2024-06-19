@@ -1,0 +1,19 @@
+package ScenarioBased;
+
+import java.util.Arrays;
+
+public class DuplicateNumberInArray {
+	public static void main(String[] args) {
+		int [] dup = {5,8,6,1,5,0,7,1,3,8,1};
+		Arrays.sort(dup);
+		for(int i = 0; i<dup.length;i++) {
+			for(int j =1; j< dup.length;j++) {
+			if(dup[i] == dup[i-1]) {
+				System.out.println(dup[i]);
+			}
+				
+			}
+		}
+	}
+
+}

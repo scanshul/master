@@ -1,0 +1,8 @@
+package ScenarioBased;
+
+public class MinMaxValueFromArray {
+	public static void main(String[] args) {
+		int[] arr = {5,8,4,45,85,11,21};
+	}
+
+}

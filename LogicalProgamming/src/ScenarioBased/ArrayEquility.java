@@ -1,0 +1,14 @@
+package ScenarioBased;
+
+import java.util.Arrays;
+
+public class ArrayEquility {
+	public static void main(String[] args) {
+		int[] array1 = {1,8,9,5,6,1};
+		int[] array2 = {1,8,9,5,6,1};
+		int[] array3 = {1,8,9,3,6,1};
+		System.out.println(Arrays.equals(array1, array2));
+		System.out.println(Arrays.equals(array1, array3));
+	}
+
+}

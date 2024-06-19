@@ -1,0 +1,8 @@
+package ScenarioBased;
+
+public class DuplicateCharatersInString {
+	public static void main(String[] args) {
+		String str = "Initializing Spring sDispatcherServlet dispatcherServlet";
+	}
+
+}

@@ -1,0 +1,39 @@
+package ImmutableConcept;
+
+import java.util.List;
+
+public final class ImmutableCaller {
+	
+	private final int paymentId;
+	private final String name;
+	private final List<String,Integer> ls;
+	
+	private ImmutableCaller(int paymentId, String name) {
+		this.paymentId = paymentId;
+		this.name = name;
+	}
+
+	public int getPaymentId() {
+		return paymentId;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	
+	public static void main(String[] args) {
+		int i =10;
+		String s = "Raman";
+		ImmutableCaller imu = new ImmutableCaller(i, s);
+		System.out.println(imu.getPaymentId());
+		System.out.println(imu.getName());
+		i = 85;
+		s= "John";
+		
+		System.out.println(imu.getPaymentId());
+		System.out.println(imu.getName());
+		
+	}
+
+}

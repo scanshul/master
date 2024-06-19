@@ -1,0 +1,64 @@
+package com.project.aj;
+
+public class StringConcetination {
+	public static void main(String[] args) {
+		String s1 = "ABC";
+		String s2 = "ABC"; //Stored in SCP
+		String s0 = "XYZ";
+		System.out.println(s1.concat(s2));
+		/*
+		 * Total 2 object created So, a total of two String objects are created: "ABC"
+		 * (shared by s1 and s2) "ABCABC" (result of s1.concat(s2) and passed to
+		 * println)
+		 */
+		
+		s1.concat(s2);
+		System.out.println(s1);
+		/*
+		 * One String object for the literal "ABC" (shared by s1 and s2). One String
+		 * object for the concatenated result "ABCABC" (created by s1.concat(s2), but
+		 * not assigned to any variable and thus eligible for garbage collection).
+		 */
+		System.out.println(s1.hashCode());
+		System.out.println(s2.hashCode());
+		
+		s1.concat(s0);
+		System.out.println(s1);
+		/*
+		 * So, a total of three String objects are created:
+		 * 
+		 * "ABC" (for s1) "XYZ" (for s2) "ABCXYZ" (result of s1.concat(s2) and passed to
+		 * println)
+		 */
+		
+		
+		
+		String s3 = new String("ABC"); //Stored in Heap Memory
+		s1.concat(s3);
+		System.out.println(s1);
+		System.out.println(s1.concat(s3));
+		
+		
+		String s4 = new String("ABCffffffffffffffffffff");
+		s3.concat(s4);
+		System.out.println(s3);
+		System.out.println(s3.concat(s4));
+		
+		
+		s1 = s1+s2;
+		System.out.println(s1);
+		
+		String st1 = "ABC";
+		st1 = st1 + "ABC";
+		System.out.println(st1);
+		
+		//Cannot Concatenate String , because String is immutable we can't changes its content 
+		/*
+		 * In Java, strings are immutable, meaning that once a String object is created,
+		 * it cannot be changed. Methods l ike concat return a new string rather than
+		 * modifying the original string.
+		 */
+		
+	}
+
+}

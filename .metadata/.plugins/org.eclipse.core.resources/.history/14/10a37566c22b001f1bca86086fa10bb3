@@ -1,0 +1,12 @@
+package ScenarioBased;
+
+public class SumOfDigit {
+	public static void main(String[] args) {
+		int num = 545823;
+		int sum = 0;
+		while() {
+			
+		}
+	}
+
+}

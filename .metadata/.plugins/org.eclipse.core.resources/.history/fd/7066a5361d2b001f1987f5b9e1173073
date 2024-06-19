@@ -1,0 +1,7 @@
+package Comparasion;
+
+import java.util.Comparator;
+
+public class RoomNoComparator implements Comparator<RoomNoComparator>{
+
+}

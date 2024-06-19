@@ -1,0 +1,30 @@
+package Comparasion;
+
+class Student implements Comparable<Student>{
+	
+	private String sname;
+	private int sid;
+
+	public Student(String sname , int sid)
+	{
+	this.sid = sid;
+	this.sname =sname;		
+	}	
+	
+	public String getSname() {
+		return sname;
+	}
+	
+	public int getSid() {
+		return sid;
+	}
+	@Override
+	public int compareTo(Student o) {
+		return this.sname -sname;
+	}
+	
+}
+
+public class ComparableInterface {
+
+}

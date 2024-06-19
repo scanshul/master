@@ -1,0 +1,17 @@
+package StringBufferBuilder;
+
+public class StringBuffBuildBasic {
+	
+	public static void main(String[] args) {
+		StringBuffer buff1 = new StringBuffer("ABC");
+		StringBuffer buff2 = new StringBuffer("ABC");
+		StringBuffer buff3 = new StringBuffer("XYZ");
+		buff1.append(buff2);
+		System.out.println(buff1);
+		
+		buff1.append(buff3);
+		System.out.println(buff1);
+		
+	}
+
+}

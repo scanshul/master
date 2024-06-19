@@ -1,0 +1,35 @@
+package com.project.aj;
+
+public class StringConcetination {
+	public static void main(String[] args) {
+		String s1 = "ABC";
+		String s2 = "ABC"; //Stored in SCP
+		s1.concat(s2);
+		System.out.println(s1);
+		System.out.println(s1.concat(s2));
+		
+		
+		String s3 = new String("ABC"); //Stored in Heap Memory
+		s1.concat(s3);
+		System.out.println(s1);
+		System.out.println(s1.concat(s3));
+		
+		
+		String s4 = new String("ABCffffffffffffffffffff");
+		s3.concat(s4);
+		System.out.println(s3);
+		System.out.println(s3.concat(s4));
+		
+		
+		s1 = s1+s2;
+		System.out.println(s1);
+		
+		String st1 = "ABC";
+		st1 = st1 + "ABC";
+		System.out.println(st1);
+		
+		//Cannot Concatenate String , because String is immutable we can't changes its content 
+		
+	}
+
+}

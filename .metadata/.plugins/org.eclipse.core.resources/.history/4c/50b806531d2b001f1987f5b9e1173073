@@ -1,0 +1,12 @@
+package Comparasion;
+
+import java.util.Comparator;
+
+public class RoomNoComparator implements Comparator<RoomNoComparator>{
+
+	public int compare(RoomRent o1, RoomRent o2) {
+		
+		return o1.g
+	}
+
+}

@@ -1,0 +1,37 @@
+package Comparasion;
+
+import java.util.Comparator;
+
+public class RoomRent {
+	private String roomNo;
+	private int roomRent;
+
+	public RoomRent(String roomNo, int roomRent) {
+		super();
+		this.roomNo = roomNo;
+		this.roomRent = roomRent;
+	}
+
+	public String getRoomNo() {
+		return roomNo;
+	}
+
+	public int getRoomRent() {
+		return roomRent;
+	}
+
+	@Override
+	public String toString() {
+		return "RoomRent [roomNo=" + roomNo + ", roomRent=" + roomRent + "]";
+	}
+
+}
+
+class RoomNoComparator implements Comparator<RoomRent>{
+
+	@Override
+	public int compare(RoomRent o1, RoomRent o2) {
+		return o1.getRoomNo().compareTo(o2.getRoomNo());
+	}
+	
+}

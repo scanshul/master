@@ -1,0 +1,56 @@
+package MyMap;
+
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class HashSetSynchronization {
+	
+	class setMofifier implements Runnable{
+		private final Set<String> set;
+		private final String name ;
+		
+		public setMofifier(Set<String> set, String name) {
+			super();
+			this.set = set;
+			this.name = name;
+		}
+
+		@Override
+		public void run() {
+			for(int i =0;i<=5;i++) {
+				String value = name + "- Value " + i;
+				set.add(value);
+				System.out.println(name + "added : " +value);
+				try {
+					Thread.sleep(10000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					System.out.println(e);
+				}
+			}
+			
+		}
+		
+	}
+	public static void main(String[] args) {
+		Set<String> set = new HashSet<>();
+		set.add("Apple");
+		set.add("Bananan");
+		set.add("WaterMillon");
+		
+		Set<String> sySet = Collections.synchronizedSet(set);
+		
+		
+		synchronized (sySet) {
+			Iterator<String> itr = sySet.iterator();
+			while(itr.hasNext()) {
+				System.out.println(itr.next());
+				
+			}
+			
+		}
+	}
+
+}

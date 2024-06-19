@@ -1,0 +1,63 @@
+package Comparasion;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class RoomRent {
+	private String roomNo;
+	private int roomRent;
+
+	public RoomRent(String roomNo, int roomRent) {
+		super();
+		this.roomNo = roomNo;
+		this.roomRent = roomRent;
+	}
+
+	public String getRoomNo() {
+		return roomNo;
+	}
+
+	public int getRoomRent() {
+		return roomRent;
+	}
+
+	@Override
+	public String toString() {
+		return "RoomRent [roomNo=" + roomNo + ", roomRent=" + roomRent + "]";
+	}
+
+	public static void main(String[] args) {
+		List<RoomRent> rentList = new ArrayList<>();
+		rentList.add(new RoomRent("RM01", 2500));
+		rentList.add(new RoomRent("RM05", 1500));
+		rentList.add(new RoomRent("RM03", 7500));
+		rentList.add(new RoomRent("RM08", 2500));
+		
+		Collections.sort(rentList, new RoomNoComparator());
+		for(RoomRent rr : rentList) {
+			System.out.println(rr);
+		}
+
+	}
+
+}
+
+class RoomNoComparator implements Comparator<RoomRent> {
+
+	@Override
+	public int compare(RoomRent o1, RoomRent o2) {
+		return o1.getRoomNo().compareTo(o2.getRoomNo());
+	}
+
+	class RomRentComparator implements Comparator<RoomRent> {
+
+		@Override
+		public int compare(RoomRent o1, RoomRent o2) {
+			return o1.getRoomRent() - o2.getRoomRent();
+		}
+
+	}
+
+}

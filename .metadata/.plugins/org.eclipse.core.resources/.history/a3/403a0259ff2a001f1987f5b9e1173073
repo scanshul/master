@@ -1,0 +1,26 @@
+package ImmutableConcept;
+
+public class ImmutableCaller {
+	
+	private int paymentId;
+	private String name;
+	
+	private ImmutableCaller(int paymentId, String name) {
+		this.paymentId = paymentId;
+		this.name = name;
+	}
+
+	public int getPaymentId() {
+		return paymentId;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
+	
+	public static void main(String[] args) {
+		payment p1 = new pay
+	}
+
+}

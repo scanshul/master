@@ -1,0 +1,27 @@
+package MyMap;
+
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class HashSetSynchronization {
+	public static void main(String[] args) {
+		Set<String> set = new HashSet<>();
+		set.add("Apple");
+		set.add("Bananan");
+		set.add("WaterMillon");
+		
+		Set<String> sySet = Collections.synchronizedSet(set);
+		
+		synchronized (sySet) {
+			Iterator<String> itr = sySet.iterator();
+			while(itr.hasNext()) {
+				System.out.println(itr.next());
+				
+			}
+			
+		}
+	}
+
+}

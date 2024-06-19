@@ -1,0 +1,29 @@
+package ScenarioBased;
+
+public class DuplicateCharatersInString {
+	public static void main(String[] args) {
+		String str = "Hello Hey Dev";
+		int len = str.length();
+		boolean[] checked = new boolean[len];
+		
+		for(int i=0 ; i<len;i++) {
+			
+			/*
+			 * if(checked[i]) { continue; }
+			 */
+			char currentChar = str.charAt(i);
+			int count =1;
+			
+			for(int j = i+1; j<len ; j++) {
+				if(str.charAt(j)==currentChar) {
+					count++;
+					//checked[j] = true;
+				}
+			}
+			if(count>1) {
+				System.out.println(currentChar + " " + count);
+			}
+		}
+	}
+
+}

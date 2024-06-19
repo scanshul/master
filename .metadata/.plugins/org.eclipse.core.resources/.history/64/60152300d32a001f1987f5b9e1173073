@@ -1,0 +1,100 @@
+package com.project.aj;
+
+public class StringConcetination {
+	public static void main(String[] args) {
+		String s1 = "ABC";
+		String s2 = "ABC"; //Stored in SCP
+		String s0 = "XYZ";
+		System.out.println(s1.concat(s2));
+		/*
+		 * Total 2 object created So, a total of two String objects are created: "ABC"
+		 * (shared by s1 and s2) "ABCABC" (result of s1.concat(s2) and passed to
+		 * println)
+		 */
+		
+		s1.concat(s2);
+		System.out.println(s1);
+		/*
+		 * One String object for the literal "ABC" (shared by s1 and s2). One String
+		 * object for the concatenated result "ABCABC" (created by s1.concat(s2), but
+		 * not assigned to any variable and thus eligible for garbage collection).
+		 */
+		System.out.println(s1.hashCode());
+		System.out.println(s2.hashCode());
+		
+		
+		System.out.println(s1.concat(s0));
+		/*
+		 * So, a total of three String objects are created:
+		 * "ABC" (for s1) "XYZ" (for s2) "ABCXYZ" (result of s1.concat(s2) and passed to
+		 * println)
+		 */
+		
+		s1.concat(s0);
+		System.out.println(s1.concat(s0));
+		
+		/*
+		 * Therefore, the objects created are:
+		 * One String object for the literal "ABC". One String object for the literal
+		 * "XYZ". One String object for the concatenated result "ABCXYZ" (created by
+		 * s1.concat(s2), but not assigned to any variable and thus eligible for garbage
+		 * collection).
+		 */
+		
+		
+		String s3 = new String("ABC"); //Stored in Heap Memory
+		s1.concat(s3);
+		System.out.println(s1);
+		
+		/*
+		 * One String object for the literal "ABC" (interned and shared by s1). One
+		 * String object for the explicit new String("ABC") (stored on the heap and
+		 * referenced by s3). One String object for the concatenated result "ABCABC"
+		 * (created by s1.concat(s3), but not assigned to any variable and thus eligible
+		 * for garbage collection).
+		 */
+		
+		System.out.println(s1.concat(s3));
+		
+		/*
+		 * One String object for the literal "ABC" (interned and shared by s1). One
+		 * String object for the explicit new String("ABC") (stored on the heap and
+		 * referenced by s3). One String object for the concatenated result "ABCABC"
+		 * (created by s1.concat(s3) and passed to System.out.println).
+		 */
+		
+		
+		String s4 = new String("JKL");
+		s3.concat(s4);
+		System.out.println(s3);
+		System.out.println(s3.concat(s4));
+		
+		
+		s1 = s1+s2;
+		/*
+		 * The expression s1 + s2 involves string concatenation. In Java, the + operator
+		 * for strings creates a new String object. The s1 + s2 concatenation creates a
+		 * new String object with the value "ABCABC". The reference s1 is then updated
+		 * to point to this new string.
+		 */
+		System.out.println(s1);
+		
+		/*
+		 * "ABC" (interned, shared by s1 and s2). "ABCABC" (result of s1 + s2 and
+		 * assigned to s1).
+		 */
+		
+		String st1 = "ABC";
+		st1 = st1 + "ABC";
+		System.out.println(st1);
+		
+		//Cannot Concatenate String , because String is immutable we can't changes its content 
+		/*
+		 * In Java, strings are immutable, meaning that once a String object is created,
+		 * it cannot be changed. Methods l ike concat return a new string rather than
+		 * modifying the original string.
+		 */
+		
+	}
+
+}

@@ -1,0 +1,7 @@
+package ScenarioBased;
+
+public class RemoveWhiteSpace {
+public static void main(String[] args) {
+	String st = "Initializing Spring DispatcherServlet dispatcherServlet";
+}
+}

@@ -1,0 +1,21 @@
+package CSOD;
+
+class A {
+	String message = "This is Parent";
+	
+	public String getTest() {
+		return message;
+	}
+}
+
+class B extends A{
+	String message = "This is Child";
+	public String getTest() {
+		return message;
+	}
+	
+}
+
+public class InheritanceScenario {
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ThreadBasicImpl.MyThread&apos; to &apos;ThreadClassImpl&apos;&#x0D;&#x0A;- Original project: &apos;Thread&apos;&#x0D;&#x0A;- Original element: &apos;ThreadBasicImpl.MyThread&apos;&#x0D;&#x0A;- Renamed element: &apos;ThreadBasicImpl.ThreadClassImpl&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MyThread&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;ThreadBasicImpl{MyThread.java[MyThread" matchStrategy="1" name="ThreadClassImpl" qualified="false" references="true" similarDeclarations="false" stamp="1717264762539" textual="false" version="1.0"/>
+</session>

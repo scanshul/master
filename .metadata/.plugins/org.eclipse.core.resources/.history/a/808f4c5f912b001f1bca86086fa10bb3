@@ -1,0 +1,21 @@
+package ScenarioBased;
+
+public class ReverseAString {
+	public static void main(String[] args) {
+		String str = "IAMTHEDEVELOPER";
+		char[] ch = str.toCharArray();
+		for(int i = ch.length-1; i>=0;i--) {
+			System.out.println(ch[i]);
+		}
+		
+		String rev = "";
+		char character;
+		for(int i = 0;i<str.length();i++) {
+			character = str.charAt(i);
+			rev = character+rev;
+			
+		}
+		System.out.println(rev);
+	}
+
+}

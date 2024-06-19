@@ -1,0 +1,9 @@
+package ScenarioBased;
+
+public class ReverseAString {
+	public static void main(String[] args) {
+		String str = "IAMTHEDEVELOPER";
+		char[] ch = str.toCharArray();
+	}
+
+}

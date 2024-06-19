@@ -1,0 +1,26 @@
+package Comparasion;
+
+public class RoomRent {
+	private String roomNo;
+	private int roomRent;
+
+	public RoomRent(String roomNo, int roomRent) {
+		super();
+		this.roomNo = roomNo;
+		this.roomRent = roomRent;
+	}
+
+	public String getRoomNo() {
+		return roomNo;
+	}
+
+	public int getRoomRent() {
+		return roomRent;
+	}
+
+	@Override
+	public String toString() {
+		return "RoomRent [roomNo=" + roomNo + ", roomRent=" + roomRent + "]";
+	}
+
+}

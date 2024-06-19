@@ -1,0 +1,53 @@
+package Comparasion;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+class Student implements Comparable<Student>{
+	
+	private String sname;
+	private int sid;
+
+	public Student(String sname , int sid)
+	{
+	this.sid = sid;
+	this.sname =sname;		
+	}	
+	
+	public String getSname() {
+		return sname;
+	}
+	
+	public int getSid() {
+		return sid;
+	}
+	@Override
+	public int compareTo(Student o) {
+		return this.sid =sid;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [sname=" + sname + ", sid=" + sid + "]";
+	}
+	
+	
+}
+
+public class ComparableInterface {
+	public static void main(String[] args) {
+		List<Student> lst = new ArrayList<>();
+		lst.add(new Student("Sohan", 25));
+		lst.add(new Student("Kamalesh", 16));
+		lst.add(new Student("Mayur", 22));
+		
+		Collections.sort(lst);
+		
+		for(Student s : lst) {
+			System.out.println(s);
+		}
+	}
+	
+
+}

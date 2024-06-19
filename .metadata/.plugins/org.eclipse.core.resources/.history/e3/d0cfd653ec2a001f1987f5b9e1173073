@@ -1,0 +1,32 @@
+package StringBufferBuilder;
+
+public class StringBufferThreadExample {
+	
+	public static void main(String[] args) {
+		StringBuffer bf = new StringBuffer();
+		ThreadTask tt1 = new ThreadTask(bf)
+	}
+
+}
+
+class ThreadTask implements Runnable{
+	private StringBuffer stringBuffer;
+	
+	public ThreadTask(StringBuffer stringBuffer) {
+		this.stringBuffer = stringBuffer;
+		
+	}
+
+	@Override
+	public void run() {
+		for(int i = 1 ; i<=5 ; i++) {
+			stringBuffer.append(Thread.currentThread().getName()).append(":").append(i).append("");
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				System.out.println(e);
+			}
+		}
+	}
+	
+}

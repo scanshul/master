@@ -1,0 +1,99 @@
+package MyMap;
+
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+class setMofifier implements Runnable {
+	private final Set<String> set;
+	private final String name;
+
+	public setMofifier(Set<String> set, String name) {
+		this.set = set;
+		this.name = name;
+	}
+
+	@Override
+	public void run() {
+		for (int i = 0; i <= 5; i++) {
+			String value = name + "- Value " + i;
+			set.add(value);
+			System.out.println(name + "added : " + value);
+			try {
+				Thread.sleep(10000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				System.out.println(e);
+			}
+		}
+
+	}
+
+}
+
+class setReader implements Runnable {
+	private final Set<String> set;
+	private final String name;
+
+	public setReader(Set<String> set, String name) {
+		this.set = set;
+		this.name = name;
+	}
+
+	@Override
+	public void run() {
+          for(int i= 0 ;i<=5;i++) {
+        	  synchronized (set) {
+        		  Iterator<String> itr  = set.iterator();
+        		  System.out.println(name + " reading set content");
+        		  while(itr.hasNext()) {
+        			  System.out.println(name + "read " + itr.next());
+        		  }
+			}
+        	  try {
+				Thread.sleep(150);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+			System.out.println(e);
+			}
+
+}			
+	}
+
+}
+public class HashSetSynchronization {
+
+	
+
+	
+
+	public static void main(String[] args) {
+		Set<String> hashSet = new HashSet<>();
+		/*
+		 * set.add("Apple"); set.add("Bananan"); set.add("WaterMillon");
+		 */
+
+		Set<String> sySet = Collections.synchronizedSet(hashSet);
+		
+		Thread writerThread1 = new Thread(new setMofifier(sySet, "Writter1"));
+		Thread writerThread2 = new Thread(new setMofifier(sySet, "Writter2"));
+		Thread readerThread1 = new Thread(new setReader(sySet, "Reader1"));
+		
+		writerThread1.start();
+		writerThread2.start();
+		readerThread1.start();
+		
+		writerThread1.join();
+
+		synchronized (sySet) {
+			Iterator<String> itr = sySet.iterator();
+			while (itr.hasNext()) {
+				System.out.println(itr.next());
+
+			}
+
+		}
+	}
+
+}

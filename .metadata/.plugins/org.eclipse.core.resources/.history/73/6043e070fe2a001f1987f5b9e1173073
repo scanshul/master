@@ -1,0 +1,10 @@
+package ImmutableConcept;
+
+final class payment{
+	private int paymentId;
+	private String name;
+}
+
+public class ImmutableCaller {
+
+}
