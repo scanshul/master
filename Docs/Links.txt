@@ -1,0 +1,5 @@
+Logical Programming Questions : 
+https://javaconceptoftheday.com/java-interview-programs-with-solutions/
+
+Collectors Method :
+https://medium.com/swlh/java-collectors-and-its-20-methods-2fc422920f18
