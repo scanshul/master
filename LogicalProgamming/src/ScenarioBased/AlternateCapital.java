@@ -12,7 +12,6 @@ public class AlternateCapital {
 				arrStr[i] = arrStr[i].toUpperCase();
 			}
 		}
-		
 		System.out.println(String.join(" ", arrStr));
 	}
 }
