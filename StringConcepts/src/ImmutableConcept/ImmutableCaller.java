@@ -40,7 +40,6 @@ public final class ImmutableCaller {
 		i = 85;
 		s= "John";
 		ls.add("Mumbai");
-		
 		System.out.println(imu.getPaymentId());
 		System.out.println(imu.getName());
 		System.out.println(imu.getLs());

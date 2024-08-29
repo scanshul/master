@@ -2,7 +2,7 @@ package ScenarioBased;
 
 public class DuplicateCharatersInString {
 	public static void main(String[] args) {
-		String str = "HHMYJLHJ";
+		String str = "HHMYJLHJOOPPP";
 		int len = str.length();
 		boolean[] checked = new boolean[len];
 		
@@ -18,8 +18,11 @@ public class DuplicateCharatersInString {
 				if(str.charAt(j)==currentChar) {
 					count++;
 					checked[j] = true;
+				
 				}
+				
 			}
+			//System.out.println(currentChar + " " + count); //Character count
 			if(count>1) {
 				System.out.println(currentChar + " " + count);
 			}

@@ -6,6 +6,10 @@ public class StringEquility {
 		String s2 = new String("HELLO");
 		System.out.println(s1==s2); //Address Comparison return false
 		System.out.println(s1.equals(s2)); //Content Comparison return true
+		String s3 = "HELLO";
+		String s4 = "HELLO";
+		System.out.println(s1==s3);
+		System.out.println(s3==s4);
+		System.out.println(s3.equals(s4));
 	}
-
 }

@@ -24,8 +24,8 @@ class Student implements Comparable<Student> {
 
 	@Override
 	public int compareTo(Student other) {
-		//return this.sid - other.sid; //increasing order
-		return other.sid - this.sid;
+		return this.sid - other.sid; //increasing order
+		//return other.sid - this.sid;
 	}
 
 	@Override

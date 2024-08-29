@@ -10,9 +10,9 @@ public class NumberCheck {
 			return false;
 		}
 	}
-	
 	public static void main(String[] args) {
-		String str = "8900";
+		String str = "123";
+		//String str = "ABC";
 		if (numCheck(str)) {
 			System.out.println("String contain number");
 		}
@@ -20,5 +20,4 @@ public class NumberCheck {
 			System.out.println("String contain no number");
 		}
 	}
-
 }

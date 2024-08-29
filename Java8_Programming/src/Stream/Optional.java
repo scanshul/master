@@ -10,10 +10,5 @@ public class Optional {
 		System.out.println(op1.orElse("String is null"));
 		java.util.Optional<String> op2= java.util.Optional.of(nullStr); // Will give error
 		System.out.println(op2);
-	
-		
-		
-	
 	}
-
 }

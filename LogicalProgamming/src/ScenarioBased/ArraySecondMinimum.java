@@ -9,17 +9,11 @@ public class ArraySecondMinimum {
 		for (int num : integer) {
 			if (num < min) {
 				secondMin = min;
-				System.out.println("secondmin: " + secondMin);
 				min = num;
-				System.out.println("min: " + min);
 			} else if (num < secondMin && num != min) {
-				System.out.println(num);
 				secondMin = num;
-
 			}
 		}
-		System.out.println(secondMin);
-
+		System.out.println("Second Minimum number is  : " + secondMin);
 	}
-
 }

@@ -23,8 +23,16 @@ public class InheritanceScenario {
 	
 	public static void main(String[] args) {
 		A obj = new B();
-		System.out.println(obj.message); //
+		System.out.println(obj.message); 
 		System.out.println(obj.getTest());
+		
+		A p1 = new A();
+		System.out.println(p1.message);
+		System.out.println(p1.getTest());
+		
+		B c1 = new B();
+		System.out.println(c1.message);
+		System.out.println(c1.getTest());
 		
 		/*
 		 * Yes, in Java, field hiding is resolved by the reference type, not by the

@@ -21,31 +21,24 @@ public class StringBuilderNotThreadExample {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	
-		}
-
-}
+		}}
 
 class ThreadTask implements Runnable{
 //	private StringBuffer stringBuffer;
-	private StringBuilder stringBuffer;
+	private StringBuilder stringBuilder;
 	
-	public ThreadTask(StringBuilder stringBuffer) {
-		this.stringBuffer = stringBuffer;
-		
+	public ThreadTask(StringBuilder stringBuilder) {
+		this.stringBuilder = stringBuilder;
 	}
 
 	@Override
 	public void run() {
 		for(int i = 1 ; i<=2 ; i++) {
-			stringBuffer.append(Thread.currentThread().getName()).append(":").append(i).append(" ");
+			stringBuilder.append(Thread.currentThread().getName()).append(":").append(i).append(" ");
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				System.out.println(e);
 			}
-			System.out.println(stringBuffer.toString());
-		}
-	}
-	
-}
+			System.out.println(stringBuilder.toString());
+		}}}

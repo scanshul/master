@@ -23,10 +23,7 @@ public class StringBuffTheadSafe {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	
-		}
-
-}
+		}}
 
 class ThreadSafeTask implements Runnable{
 	private StringBuffer stringBuffer;
@@ -48,5 +45,4 @@ class ThreadSafeTask implements Runnable{
 			System.out.println(stringBuffer.toString());
 		}
 	}
-
 }

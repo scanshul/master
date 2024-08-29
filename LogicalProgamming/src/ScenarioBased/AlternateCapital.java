@@ -8,7 +8,7 @@ public class AlternateCapital {
 		String[] arrStr = str.split(" ");
 		
 		for(int i = 0 ; i<arrStr.length;i++) {
-			if(i%2 == 0) {
+			if(i%2 == 0) {//remainder
 				arrStr[i] = arrStr[i].toUpperCase();
 			}
 		}

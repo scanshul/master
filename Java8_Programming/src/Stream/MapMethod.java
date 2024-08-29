@@ -12,7 +12,5 @@ public class MapMethod {
 		List<Integer> ls = Arrays.asList(1,2,3,4,5);
 		List<Integer> squareList = ls.stream().map(i -> i*i).collect(Collectors.toList());
 		System.out.println("Square root of all element inside the list : " + squareList);
-		
 	}
-
 }

@@ -18,14 +18,14 @@ public class DuplicateWordNCount {
 				countMap.put(dup, 1);
 			}
 		}
-		System.out.println(countMap);
+		System.out.println(countMap); //Word Count
 		Map<String, Integer> duplicateMap = new HashMap<>();
 		for(Map.Entry<String, Integer> map : countMap.entrySet()) {
 			if(map.getValue() > 1) {
 			duplicateMap.put(map.getKey(), map.getValue());
 			}
 		}
-		System.out.println(duplicateMap);
+		System.out.println(duplicateMap); // Duplicate word count
 		
 		
 	}
