@@ -20,7 +20,6 @@ public class DuplicateCharatersInString {
 					checked[j] = true;
 				
 				}
-				
 			}
 			//System.out.println(currentChar + " " + count); //Character count
 			if(count>1) {

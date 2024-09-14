@@ -2,7 +2,7 @@ package ScenarioBased;
 
 public class ArraySecondMinimum {
 	public static void main(String[] args) {
-		int[] integer = { 110, 85, 96, 12, 5 };
+		int[] integer = { 110, 85, 96, 12, 5,7 };
 		int min = Integer.MAX_VALUE;
 		int secondMin = Integer.MAX_VALUE;
 
@@ -10,7 +10,8 @@ public class ArraySecondMinimum {
 			if (num < min) {
 				secondMin = min;
 				min = num;
-			} else if (num < secondMin && num != min) {
+			} 
+			else if (num < secondMin && num != min) {
 				secondMin = num;
 			}
 		}

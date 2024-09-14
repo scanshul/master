@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class MostFrequentElementInArray {
 	public static void main(String[] args) {
-		Integer[] arr = {45,8,5,1,8,3,99,8,7};
+		Integer[] arr = {45,8,5,1,8,3,99,8,7,1,1};
 		Map<Integer, Integer> frequencyMap = new HashMap<>();
 		
 		for(Integer num : arr) {

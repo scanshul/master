@@ -1,5 +1,10 @@
 package ThreadBasicImpl;
 
+
+/*In Java, the volatile keyword is used to indicate that a variable's value will be modified by different threads. 
+ * Declaring a variable as volatile ensures that changes made to the variable by one thread are immediately visible to 
+ * other threads, providing a lightweight synchronization mechanism.
+*/
 class MyVolatileThread extends Thread {
 	private static volatile boolean running = true;
 

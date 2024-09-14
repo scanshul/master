@@ -11,7 +11,7 @@ public class NumberCheck {
 		}
 	}
 	public static void main(String[] args) {
-		String str = "123";
+		String str = "ACF";
 		//String str = "ABC";
 		if (numCheck(str)) {
 			System.out.println("String contain number");

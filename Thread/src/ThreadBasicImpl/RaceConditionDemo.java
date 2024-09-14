@@ -1,5 +1,10 @@
 package ThreadBasicImpl;
 
+/*A race condition in Java (or in any multithreaded programming environment) occurs when two or more threads can access shared data 
+ * and try to change it simultaneously. Because the thread scheduling algorithm can swap between threads at any time,
+ *  you can't predict the order in which the threads will attempt to access the shared data. As a result, 
+ *  the final outcome of the data can depend on the timing of the threads, leading to unpredictable behavior and bugs.
+*/
 public class RaceConditionDemo implements Runnable {
 	private int count;
 

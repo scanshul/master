@@ -17,7 +17,8 @@ public class ReverseAString {
 			rev = character+rev;
 			
 		}
-	//	System.out.println(rev);
+		System.out.println("----------------");
+		System.out.println(rev);
 	}
 
 }

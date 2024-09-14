@@ -11,5 +11,9 @@ public class StringEquility {
 		System.out.println(s1==s3);
 		System.out.println(s3==s4);
 		System.out.println(s3.equals(s4));
+		
+		StringBuilder sb1 = new StringBuilder("KITE");
+		StringBuilder sb2 = new StringBuilder("KITE");
+		System.out.println(sb1.toString().equals(sb2.toString()));
 	}
 }
