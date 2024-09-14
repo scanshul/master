@@ -1,5 +1,9 @@
 package Question;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -32,7 +36,37 @@ public class SortedBySalaryAndCheckByAge {
 		map.entrySet().stream().filter(entry -> entry.getValue().getAge() > 25).map(Map.Entry::getValue).sorted(
 				(e1, e2) -> Double.compare(e2.getSalary(), e1.getSalary())).collect(Collectors.toList());
 		mapList.forEach(System.out::println);
+		
+		System.out.println("----------------");
+		//Find Top 3 Male Employees by salary having age Between 30 and 40 in Each Department
+		
+		List<EmployeeDetails> genderList = Arrays.asList(
+	            new EmployeeDetails("John", 35, 90000, "Male", "IT"),
+	            new EmployeeDetails("Alice", 28, 85000, "Female", "IT"),
+	            new EmployeeDetails("Bob", 32, 87000, "Male", "HR"),
+	            new EmployeeDetails("Eve", 45, 95000, "Female", "HR"),
+	            new EmployeeDetails("Charlie", 36, 120000, "Male", "IT"),
+	            new EmployeeDetails("David", 39, 110000, "Male", "HR"),
+	            new EmployeeDetails("Mike", 33, 92000, "Male", "IT"),
+	            new EmployeeDetails("Paul", 40, 99000, "Male", "Finance"),
+	            new EmployeeDetails("Kevin", 31, 100000, "Male", "Finance"));
+		Map<String, List<EmployeeDetails>> finalList = genderList.stream()
+				.filter(emp0 -> emp0.getGender().equals("Male"))
+				.filter(emp1 -> emp1.getAge() >= 30 && emp1.getAge() <= 40)
+				.collect(Collectors.groupingBy(EmployeeDetails::getDept,
+						Collectors.collectingAndThen(Collectors.toList(),
+								list1 -> list1.stream()
+										.sorted(Comparator.comparingDouble(EmployeeDetails::getSalary).reversed())
+										.limit(3).collect(Collectors.toList()))));
+		
+		finalList.forEach((dep,empList)->{
+			System.out.println("Department : " + dep);
+			empList.forEach(System.out::println);
+		});
+		
 	
 	}
+	
+	
 
 }

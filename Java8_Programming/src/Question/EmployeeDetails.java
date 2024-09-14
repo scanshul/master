@@ -11,6 +11,7 @@ public class EmployeeDetails {
 	private String dept;
 	private double salary;
 	private int age;
+	private String gender;
 	
 	public int getId() {
 		return id;
@@ -44,10 +45,18 @@ public class EmployeeDetails {
 	public void setAge(int age) {
 		this.age = age;
 	}
+	
+	
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 	@Override
 	public String toString() {
 		return "EmployeeDetails [id=" + id + ", name=" + name + ", dept=" + dept + ", salary=" + salary + ", age=" + age
-				+ "]";
+				+ ", gender=" + gender + "]";
 	}
 	
 	
@@ -63,8 +72,28 @@ public class EmployeeDetails {
 		this.age =age;
 	}
 	
+	public EmployeeDetails(int id, String name, String dept, double salary,int age,String gender) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.dept = dept;
+		this.salary = salary;
+		this.age =age;
+		this.gender =gender;
+	}
 	
 	
+	
+	
+	
+	public EmployeeDetails(String name, int age, double salary, String gender, String dept) {
+		super();
+		this.name = name;
+		this.dept = dept;
+		this.salary = salary;
+		this.age =age;
+		this.gender =gender;
+	}
 	public List<EmployeeDetails> getEmployeeList(){
 		List<EmployeeDetails> empList = new ArrayList<>();
 		EmployeeDetails emp1 = new EmployeeDetails(1, "Rohan", "IT", 4500,23);
