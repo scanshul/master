@@ -1,8 +1,6 @@
 package Question;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -12,7 +10,7 @@ import java.util.stream.Collectors;
 public class SortedBySalaryAndCheckByAge {
 	public static void main(String[] args) {
 		
-		//List<Employee> : where employee age>35 and sorting based on salary ascending order
+		//List<Employee> : where employee age>25 and sorting based on salary ascending order
 		System.out.println("Input List-----");
 		EmployeeDetails emp = new EmployeeDetails();
 		List<EmployeeDetails> list = emp.getEmployeeList();
