@@ -1,6 +1,6 @@
 package Singleton;
 
-public class MySingletonLazy {
+public final class MySingletonLazy {
 	
 	private static MySingletonLazy instance;
 	

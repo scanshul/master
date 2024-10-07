@@ -1,6 +1,6 @@
 package ScenarioBased;
 
-public class AlternateCapital {
+public class AlternateWordCapital {
 
 	
 	public static void main(String[] args) {

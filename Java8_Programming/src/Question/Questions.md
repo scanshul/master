@@ -20,3 +20,5 @@ I/O : Integer i = 10 , Integer j = 20 , Integer k = 30  & O/p : 10
 17. Find Max Integer Value between more then one Integer.
 I/O : Integer i = 10 , Integer j = 20 , Integer k = 30  & O/p : 30
 
+18. Duplicate Element from Array.
+
