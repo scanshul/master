@@ -1,1 +1,0 @@
-The boxed() method is used to convert a stream of primitive types (like int, double, long) into a stream of their corresponding wrapper types (Integer, Double, Long).
