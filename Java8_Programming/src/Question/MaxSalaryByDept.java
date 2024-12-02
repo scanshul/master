@@ -17,7 +17,7 @@ public class MaxSalaryByDept {
 		lst.stream().collect(Collectors.groupingBy(EmployeeDetails::getDept,
 				Collectors.maxBy(Comparator.comparingDouble(EmployeeDetails::getSalary))));
 		
-		empMap.forEach((dept,name)-> System.out.print("Department :" + dept + " , name : " +name.get() ));
+		empMap.forEach((dept,name)-> System.out.println("Department :" + dept + " , name : " +name.get() ));
 	}
 
 }

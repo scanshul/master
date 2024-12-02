@@ -94,7 +94,7 @@ public class EmployeeDetails {
 		this.age =age;
 		this.gender =gender;
 	}
-	public List<EmployeeDetails> getEmployeeList(){
+	public static List<EmployeeDetails> getEmployeeList(){
 		List<EmployeeDetails> empList = new ArrayList<>();
 		EmployeeDetails emp1 = new EmployeeDetails(1, "Rohan", "IT", 4500,23);
 		EmployeeDetails emp2 = new EmployeeDetails(2, "Komal", "HR", 3300,45);
