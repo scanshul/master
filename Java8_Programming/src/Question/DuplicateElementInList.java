@@ -28,8 +28,12 @@ public class DuplicateElementInList {
 		System.out.println("Duplicate Element : " +  ls);
 		
 		List<String> strList = Arrays.asList("Mango","Apple","Banana","Mango","Graps","Pineple","Chiku","Graps","Mango");
-		List<String> dupList =strList.stream().collect(Collectors.groupingBy(s->s ,Collectors.counting())).entrySet().stream().filter(e-> e.getValue()>1).map(Map.Entry::getKey).collect(Collectors.toList());
-	     System.out.println(dupList);
+		List<String> dupList =strList.stream().collect(Collectors.groupingBy(s->s ,Collectors.counting())).entrySet().
+				stream().filter(e-> e.getValue()>1).map(Map.Entry::getKey).collect(Collectors.toList());
+		
+		Map<String, Long> dupList2 =strList.stream().collect(Collectors.groupingBy(s->s ,Collectors.counting())).entrySet().
+				stream().filter(e-> e.getValue()>1).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry:: getValue));
+	     System.out.println(dupList2);
 	}
 
 }

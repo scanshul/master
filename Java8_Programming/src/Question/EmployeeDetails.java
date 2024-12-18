@@ -100,7 +100,7 @@ public class EmployeeDetails {
 		EmployeeDetails emp2 = new EmployeeDetails(2, "Komal", "HR", 3300,45);
 		EmployeeDetails emp3 = new EmployeeDetails(3, "Rajesh", "IT", 2800,31);
 		EmployeeDetails emp4 = new EmployeeDetails(4, "Nitin", "Sales", 6300,25);
-		EmployeeDetails emp5 = new EmployeeDetails(5, "Mukund", "IT", 1800,21);
+		EmployeeDetails emp5 = new EmployeeDetails(5, "Rohan", "IT", 1800,21);
 		EmployeeDetails emp6 = new EmployeeDetails(6, "Likhit", "Sales", 6900,23);
 		EmployeeDetails emp7 = new EmployeeDetails(7, "Jay", "Sales", 9000,28);
 		empList = Arrays.asList(emp1,emp2,emp3,emp4,emp5,emp6,emp7);

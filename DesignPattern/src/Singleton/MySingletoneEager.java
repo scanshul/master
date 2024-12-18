@@ -8,4 +8,8 @@ public class MySingletoneEager {
 		return eagerInstance;
 		
 	}
+	
+	private Object readResolve() {
+		return eagerInstance;
+	}
 }
